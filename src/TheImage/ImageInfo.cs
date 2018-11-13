@@ -1,13 +1,22 @@
-﻿using System;
-using System.Drawing;
+﻿using SixLabors.ImageSharp;
+using SixLabors.ImageSharp.PixelFormats;
+using System;
 
 namespace TheImage
 {
     public class ImageInfo
     {
-        long countPixel(Image image)
+        long countPixel(Image<Rgba32> image)
         {
-            return image.Size.Width * image.Size.Height;
+            return image.Width * image.Height;
+        }
+
+        long countPixelFromFile(string fileName)
+        {
+            using (Image<Rgba32> image = Image.Load("foo.jpg"))
+            {
+                return countPixel(image);
+            }
         }
     }
 }
