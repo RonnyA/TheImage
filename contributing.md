@@ -15,6 +15,7 @@ For every contribution, you must:
 * test your code with the supported SDKs
 * follow the quality guidance, general rules and naming convention
 * target master branch (or an appropriate release branch if appropriate for a bug fix)
+* Create unit test for your commit and include it 
 
 ## If adding a new feature
 Add or update unit tests (if applicable)
